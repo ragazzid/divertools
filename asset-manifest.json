@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/divertools/static/css/main.881bb4d2.css",
+    "main.js": "/divertools/static/js/main.61eeba3a.js",
+    "static/js/787.8f6bd39f.chunk.js": "/divertools/static/js/787.8f6bd39f.chunk.js",
+    "index.html": "/divertools/index.html",
+    "main.881bb4d2.css.map": "/divertools/static/css/main.881bb4d2.css.map",
+    "main.61eeba3a.js.map": "/divertools/static/js/main.61eeba3a.js.map",
+    "787.8f6bd39f.chunk.js.map": "/divertools/static/js/787.8f6bd39f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.881bb4d2.css",
+    "static/js/main.61eeba3a.js"
+  ]
+}
