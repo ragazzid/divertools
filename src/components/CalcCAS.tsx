@@ -25,25 +25,32 @@ const CalcCAS: React.FC = () => {
 
   return (
     <div className="border p-4 rounded-md shadow-md">
+      <div>
       <h2 className="text-lg font-semibold mb-2">
         Calcular CAS (Consumo de Ar na Superfície)
       </h2>
-      <div className="mb-4">
-        <label>
-          Consumo de Ar (AC - bar):
-          <input
-            type="number"
-            value={AC}
-            onChange={(e) => setAC(prv(parseFloat(e.target.value)))}
-            className={`border rounded-md p-2 ${
-              AC > 0 ? "border-green-500" : "border-red-500"
-            }`}
-          />
-        </label>
       </div>
-      <div className="mb-4">
-        <label>
+      <div className='w-full max-w-lg'>
+        <div className="md:flex md:items-center text-right my-4">
+          <div className="md:w-2/3 mr-2">
+            Consumo de Ar (AC - bar):
+          </div>
+          <div className="">
+            <input
+              type="number"
+              value={AC}
+              onChange={(e) => setAC(prv(parseFloat(e.target.value)))}
+              className={`border rounded-md p-2 ${
+                AC > 0 ? "border-green-500" : "border-red-500"
+              }`}
+            />
+          </div>
+        </div>
+      <div className="md:flex md:items-center text-right">
+        <div className="md:w-2/3 mr-2">
           Volume do Cilindro (V - litros):
+        </div>
+        <div>
           <input
             type="number"
             value={V}
@@ -52,11 +59,13 @@ const CalcCAS: React.FC = () => {
               V > 0 ? "border-green-500" : "border-red-500"
             }`}
           />
-        </label>
+        </div>
       </div>
-      <div className="mb-4">
-        <label>
+      <div className="md:flex md:items-center text-right my-4">
+        <div className="md:w-2/3 mr-2">
           Tempo (t - minutos):
+        </div>
+        <div>
           <input
             type="number"
             value={t}
@@ -65,11 +74,13 @@ const CalcCAS: React.FC = () => {
               t > 0 ? "border-green-500" : "border-red-500"
             }`}
           />
-        </label>
+        </div>
       </div>
-      <div className="mb-4">
-        <label>
-          Pressão absoluta na profundidade (P - bar):
+      <div className="md:flex md:items-center text-right">
+        <div className="md:w-2/3 mr-2">
+          Pressão absoluta profundidade (P - bar):
+        </div>
+        <div>
           <input
             type="number"
             value={P}
@@ -78,8 +89,9 @@ const CalcCAS: React.FC = () => {
               P > 0 ? "border-green-500" : "border-red-500"
             }`}
           />
-        </label>
+        </div>
       </div>
+      <div className="text-center my-5">
       <button
         onClick={calculateCAS}
         className={`${
@@ -88,6 +100,9 @@ const CalcCAS: React.FC = () => {
       >
         Calcular CAS
       </button>
+      </div>
+      </div>
+      
       {result !== null && (
         <p className="mt-4">
           Consumo de Ar na Superfície (CAS): {result.toFixed(2)} litros/min
